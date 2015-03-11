@@ -2,8 +2,8 @@
 #  = type(tokens)
 __author__ = 'Paul_Song'
 
-_wechat_ = '''WeChat is a free messaging & calling app that allows you to easily connect with family & friends across countries. It’s the all-in-one communications app for free text (SMS/MMS), voice & video calls, moments, photo sharing, and games.
-
+_wechat_ = '''WeChat is a free messaging & calling app that allows you to easily connect with family & friends across countries.
+It’s the all-in-one communications app for free text (SMS/MMS), voice & video calls, moments, photo sharing, and games.
 WHY USE WECHAT:
 • ALWAYS FREE: No annual subscription fee. Absolutely free for life.
 • FREE VOICE & VIDEO CALLS: High-quality free calls to anywhere in the world.
@@ -22,6 +22,10 @@ WHY USE WECHAT:
 
 from nltk import word_tokenize
 import nltk
+import gensim.nosy
+
+
+nltk.download('all')
 tokens = word_tokenize(_wechat_.decode('utf-8'))
-text = nltk.Text(tokens)
-print text.concordance('multimedia')
+
+#print text.concordance('multimedia')
