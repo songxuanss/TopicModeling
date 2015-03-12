@@ -79,12 +79,4 @@ class WandoujiaCrawler():
 
         return apks
 
-if __name__ == "__main__":
-    crawler = PlayCrawler()
-    data = crawler.getTopFree(10)
-    print len(data)
-
-    for item in data:
-        print item
-
 
