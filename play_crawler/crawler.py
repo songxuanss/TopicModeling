@@ -51,10 +51,8 @@ class PlayCrawler:
 		version = sub_soup.find('div', {'class': 'content', 'itemprop': 'softwareVersion'})
 		return version
 
-
-
 if __name__ == '__main__':
 	p = PlayCrawler()
-	rs = p.getTopFree(100)
+	rs = p.getTop100Free(10)
 	apklist = p.parser(rs)
 	print apklist
