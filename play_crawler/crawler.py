@@ -23,12 +23,12 @@ class PlayCrawler:
 		self.__apkdetail__ = 'https://play.google.com/store/apps/details?id=%s&hl=en'
 
 	def getTop100Free(self, num):
-		print "getting apk from google site..."
+		print("getting apk from google site...")
 		url = self.__top100free__
 		h = httplib2.Http()
 		(resp, content) = h.request(url % num, 'GET')
 		rs = self.parser(content)
-		print "finish getting apk from google site"
+		print("finish getting apk from google site")
 		return rs
 
 	def parser(self, result):
@@ -55,4 +55,4 @@ if __name__ == '__main__':
 	p = PlayCrawler()
 	rs = p.getTop100Free(10)
 	apklist = p.parser(rs)
-	print apklist
+	print(apklist)
